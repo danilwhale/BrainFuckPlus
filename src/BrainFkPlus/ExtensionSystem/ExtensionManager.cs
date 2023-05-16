@@ -3,6 +3,9 @@ using System.Reflection;
 
 namespace BrainFkPlus.ExtensionSystem;
 
+/// <summary>
+/// Used to load extensions from "ext/" folder
+/// </summary>
 public static class ExtensionManager
 {
     public const string EXTENSIONS_ROOT = "ext/";
@@ -24,7 +27,7 @@ public static class ExtensionManager
             }
             else
             {
-                Utilities.Log("Unable to load assembly " + asm, Utilities.LogLevel.Warning);
+                Logging.Log("Unable to load assembly " + asm, Logging.LogLevel.Warning);
             }
         }
     }

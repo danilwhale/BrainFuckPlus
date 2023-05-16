@@ -2,6 +2,9 @@ using BrainFkPlus.ExtensionSystem;
 
 namespace BrainFkPlus;
 
+/// <summary>
+/// Class, that clean ups code and pushes it to Compiler
+/// </summary>
 public class Parser
 {
     internal static readonly string[] BrainFuckExtensions = { ".b", ".bf" };
@@ -12,12 +15,15 @@ public class Parser
     public string FilePath { get; }
     public Compiler Compiler { get; }
 
-    public Parser(Compiler compiler, string filePath)
+    internal Parser(Compiler compiler, string filePath)
     {
         FilePath = filePath;
         Compiler = compiler;
     }
 
+    /// <summary>
+    /// Execute current script
+    /// </summary>
     public void Execute()
     {
         string code = string.Empty;

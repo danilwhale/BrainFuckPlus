@@ -5,12 +5,18 @@ using BrainFkPlus.Operators;
 
 namespace BrainFkPlus;
 
+/// <summary>
+/// Compiles BrainFuck/BrainFuck+ script code
+/// </summary>
 public class Compiler
 {
+    /// <summary>
+    /// Read-only collection of currently registered operators
+    /// </summary>
     public ReadOnlyCollection<IOperator> RegisteredOperators => _registeredOperators.AsReadOnly();
     private List<IOperator> _registeredOperators;
 
-    public Compiler()
+    internal Compiler()
     {
         _registeredOperators = new List<IOperator>();
     }
@@ -20,7 +26,7 @@ public class Compiler
     /// </summary>
     /// <param name="code">BrainFuck/BrainFuck+ code</param>
     /// <returns>Interpreted code with operators</returns>
-    public int[] Compile(string code)
+    internal int[] Compile(string code)
     {
         int[] cells = new int[30_000];
         int ci = 0;
@@ -116,6 +122,11 @@ public class Compiler
     //     return cells;
     // }
 
+    /// <summary>
+    /// Registers IOperator of type T
+    /// </summary>
+    /// <typeparam name="T">Operator Type</typeparam>
+    /// <returns>Compiler instance</returns>
     public Compiler RegisterOperator<T>() where T : IOperator
     {
         var constructor = typeof(T).GetConstructor(Array.Empty<Type>());

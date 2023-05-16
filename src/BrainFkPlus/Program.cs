@@ -12,26 +12,26 @@ using BrainFkPlus.Operators;
 
 if (args.Length < 1)
 {
-    Utilities.Log("Specify script to execute (extensions: " + string.Join(", ", Parser.AllowedExtensions) + ")");
+    Logging.Log("Specify script to execute (extensions: " + string.Join(", ", Parser.AllowedExtensions) + ")");
     return 1;
 }
 
 if (!File.Exists(args[0]))
 {
-    Utilities.Log("File not found", Utilities.LogLevel.Fatal);
+    Logging.Log("File not found", Logging.LogLevel.Fatal);
     return 1;
 }
 if (!Parser.AllowedExtensions.Contains(Path.GetExtension(args[0])))
 {
-    Utilities.Log("Unrecognized file extension: " + Path.GetExtension(args[0]), Utilities.LogLevel.Fatal);
-    Utilities.Log("Extension must be one of following: " + string.Join(' ', Parser.AllowedExtensions));
+    Logging.Log("Unrecognized file extension: " + Path.GetExtension(args[0]), Logging.LogLevel.Fatal);
+    Logging.Log("Extension must be one of following: " + string.Join(' ', Parser.AllowedExtensions));
     return 1;
 }
 
 if (!Parser.BrainFuckExtensions.Contains(Path.GetExtension(args[0])))
     ExtensionManager.LoadExtensions();
 else
-    Utilities.Log("Specified file is BrainFuck, skipping extensions load");
+    Logging.Log("Specified file is BrainFuck, skipping extensions load");
 
 try
 {
@@ -56,11 +56,11 @@ try
     parser.Execute();
 
     Console.WriteLine();
-    Utilities.Log("Spent " + stopwatch.ElapsedMilliseconds + " ms on compiling");
+    Logging.Log("Spent " + stopwatch.ElapsedMilliseconds + " ms on compiling");
 }
 catch (Exception ex)
 {
-    Utilities.Log("We have problems!\n\t> " + ex.GetType().FullName + " - " + ex.Message, Utilities.LogLevel.Fatal);
+    Logging.Log("We have problems!\n\t> " + ex.GetType().FullName + " - " + ex.Message, Logging.LogLevel.Fatal);
 }
 
 return 0;

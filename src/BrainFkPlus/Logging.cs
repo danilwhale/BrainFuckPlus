@@ -1,7 +1,13 @@
 namespace BrainFkPlus;
 
-public static class Utilities
+/// <summary>
+/// Contains basic logging functionality
+/// </summary>
+public static class Logging
 {
+    /// <summary>
+    /// Level of log message
+    /// </summary>
     public enum LogLevel
     {
         Debug,
@@ -11,6 +17,11 @@ public static class Utilities
         Fatal
     }
 
+    /// <summary>
+    /// Logs message with specified level
+    /// </summary>
+    /// <param name="message">Message to log</param>
+    /// <param name="level">Level of log</param>
     public static void Log(string message, LogLevel level = LogLevel.Info)
     {
         string msg = level switch

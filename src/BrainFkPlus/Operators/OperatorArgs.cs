@@ -1,9 +1,11 @@
 namespace BrainFkPlus.Operators;
 
+/// <summary>
+/// Contains references to parser variables. Used in IOperator.Run
+/// </summary>
 public ref struct OperatorArgs
 {
-    // as this is only c# 11 (.net 7.0) feature, it was replaced by implementation
-    // of Ref<T>
+    // as this is only c# 11 (.net 7.0) feature, it was replaced by implementation of Ref<T>
     // private ref int _CellIndex;
     // public ref int CellIndex => ref _CellIndex;
 
@@ -13,12 +15,30 @@ public ref struct OperatorArgs
     // private ref int _CodeIndex;
     // public ref int CodeIndex => ref _CodeIndex;
 
+    /// <summary>
+    /// Reference to current cell index, can be overriden
+    /// </summary>
     public Ref<int> CellIndex { get; }
+    /// <summary>
+    /// Reference to current cell value, can be overriden
+    /// </summary>
     public Ref<int> CellValue { get; }
+    /// <summary>
+    /// Reference to current parser index, can be overriden
+    /// </summary>
     public Ref<int> CodeIndex { get; }
+    /// <summary>
+    /// Reference to next cell value, can be overriden
+    /// </summary>
     public Ref<int> NextCell { get; }
 
+    /// <summary>
+    /// Current parsed character
+    /// </summary>
     public char CurrentChar { get; init; }
+    /// <summary>
+    /// Code, that being parsed
+    /// </summary>
     public string Code { get; init; }
 
     internal OperatorArgs(
