@@ -4,6 +4,9 @@ This extension can also interprete original Brainfuck
 <br/> <br/>
 Supports user-defined extensions!
 
+## Usage
+BrainFkPlus.exe [path/to/script]
+
 ## Namings
 Uh... namings...? <br/>
 I prefer name all scripts lowercase: `myprog.bfp`  <br/>
