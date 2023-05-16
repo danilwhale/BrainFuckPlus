@@ -10,11 +10,9 @@ Brainfuck+ supports only files with extension: `.b`, `.bf`, `.bp`, `.b+`, `.bfp`
 Check out [examples](https://github.com/localwhale20/BrainFuckPlus/tree/main/examples) <br/>
 I prefer name variables as `adrX` or `vrX`, but by original code they seems to be `cells` 
 
+## Documentation
+Check out [documentation here](https://github.com/localwhale20/BrainFuckPlus/tree/main/docs) <br/>
+Explains basics of BF and features of BrainFkPlus.Extension
+
 ## BrainFkPlus.Extension
-Check out [source code](https://github.com/localwhale20/BrainFuckPlus/tree/main/src/BrainFkPlus.Extension) <br/>
-It adds several operators:
-* `* - multiply`
-* `/ - division`
-* `_ - write current value to console`
-* `; - endl (new line)`
-* `? - write current index to console`
+Check out [source code here](https://github.com/localwhale20/BrainFuckPlus/tree/main/src/BrainFkPlus.Extension)
