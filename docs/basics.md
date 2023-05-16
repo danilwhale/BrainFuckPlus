@@ -1,6 +1,6 @@
 # Basics
 Brainfuck is defined as 'BF' and Brainfuck+ as 'BF+' to read easier
-## Commenting
+## Commenting (BF+ ONLY)
 Comments are defined by `'`, there's no multiline comments, sadly.
 ```
 ' This is a comment!
