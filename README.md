@@ -1,6 +1,8 @@
 # Brainfuck+
 An extended interpreter for original esotaric language - [BrainFuck](https://en.wikipedia.org/wiki/Brainfuck) <br/>
 This extension can also interprete original Brainfuck
+<br/> <br/>
+Supports user-defined extensions!
 
 ## Namings
 Uh... namings...? <br/>
