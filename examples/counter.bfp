@@ -1,0 +1,17 @@
+' requires BrainFkPlus.Extension to work, as it simplifies outputs
+
++++++ ' declare adr0 for looping adr1
+' add 25 (5 * 5) to adr1
+[
+	>+++++ ' add 5 to adr1
+	<-     ' remove 1 from adr0
+]
+
+> ' go back to adr1
++ ' add 1 to adr1 (to have 25, we had 24 before)
+
+' count from 25 to 0 using adr1
+[
+	-  ' decrement adr1 
+	_; ' and print it's current value
+]

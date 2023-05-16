@@ -1,0 +1,34 @@
+' requires BrainFkPlus.Extension to run
+
+' vec3 v1
+> ++    ' x = 2
+> ++++  ' y = 4
+> +     ' z = 1
+
+' vec3 v2
+> +++          ' x = 3
+> ++++++++++++ ' y = 12
+> +++++++      ' z = 7
+
+<<< ' back to v2.z -> v1.z
+<<< ' back to v1.z -> none
+
+> ** ' v1.x * v1.y * v1.y
+_;
+
+> *  ' v1.y * v1.z
+_;
+
+>    ' v1.z
+_;
+
+;
+
+> ***** ' v2.x * v2.y * v2.y * v2.y * v2.y * v2.y
+_;
+
+> ++*   ' (v2.y + 2) * v2.z
+_;
+
+> +++++ ' v2.z + 5
+_
