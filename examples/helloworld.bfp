@@ -3,7 +3,7 @@
 
 ' print "Hello world!" to console
 ' uses magic of ASCII characters
-' you can check charmap.exe to see indexes of all characters
+' you can check ~~charmap.exe~~ asciitable.com to see indexes of all characters
 
 ++++++++                ' Set Cell #0 to 8
 [
