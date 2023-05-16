@@ -4,6 +4,7 @@ This extension can also interprete original Brainfuck
 
 ## Namings
 Uh... namings...? <br/>
+I prefer name all scripts lowercase: `myprog.bfp`  <br/>
 Brainfuck+ supports only files with extension: `.b`, `.bf`, `.bp`, `.b+`, `.bfp` and `.bf+`.
 
 ## Examples
