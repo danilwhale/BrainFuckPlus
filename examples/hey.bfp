@@ -1,0 +1,19 @@
+' 'h' character
+++++ ++++
+[
+	> ++++ ++++ ++++ +
+	< -
+]
+>.
+' we have 104 right now, so we can just substract 3
+' and get 'e'
+---.
+
+' 'y' character
+' to get 'y' we just add 20
+<+++++
+[
+	> ++++
+	< -
+]
+>.
